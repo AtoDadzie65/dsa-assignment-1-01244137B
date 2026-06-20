@@ -1,0 +1,61 @@
+registration = [1023,1050,1023,1102,1050,1023,1201,1300,1023]
+
+# 1.Most frequent Registrant
+def get most frequent (data):
+ counts = {}
+ for student id in data:
+    counts [student_id] = counts .get(student_id, 0 )+ 1
+# return max (counts, key = counts.get)
+
+# 2. Ordered Deduplication
+ def get_unique_ordered(data):
+seen = set()
+result = []
+ for student_id in data:
+ if student_id not in seen:
+  result. append(student _id)
+  seen.add (student_id)
+   return results 
+
+# 3. First unique student 
+    def get_first_unique(data):
+     counts = {}
+     for students_id in data:
+    counts[student_id] == counts.get(student_id 0)+1
+
+  for student_id in data:
+   if counts[student_id] == 1:
+   return student_id
+    return None
+
+# 4. Contiguous Subarray Sum
+  def has subarry with target(data,target):
+  # Using a hash map to store prefix sums for O(n) efficiency
+    prefix_sums = {0: -1}
+    current_sum = 0
+
+   for i, num in enumerate(data):
+       current_sum += num
+  if (current_sum - target ) in prefix_sums:
+      return True
+    prefix_sums[current_sum] = i
+      return False
+
+
+5. Complexity Analysis 
+ 
+Task: Most frequent 
+Time Complexity: O(N)
+Space Complexity: O(K)
+
+Task:Ordered Deduplicatio
+Time Complexity: O(N)
+Space Complexity: O(K)
+
+Task: First Unique Student 
+Time Complexity: O(N)
+Space Complexity: O(K)
+
+Task:Contiguous Subarry
+Time Complexity: O(N)
+Space Complexity:O(K)
